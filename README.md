@@ -9,7 +9,7 @@ Prototype d'application pour les centres d'état civil du Gabon : déclaration d
 | Dossier | Contenu |
 |---|---|
 | `frontend/` | Application web React (Vite) |
-| `docs/` | Cahier des charges et plan de travail du projet |
+| `docs/` | Cahier des charges, plan de travail et **[guide de développement](docs/GUIDE_DEVELOPPEMENT.md)** |
 
 ## Lancer l'application
 
@@ -42,6 +42,10 @@ Puis ouvrir http://localhost:5173/connexion.
 - **Documents PDF** (html2canvas + jsPDF) au format A4, sur le modèle des actes gabonais : volets, copie intégrale, extraits avec et sans filiation, certificat de naissance, déclaration, récépissé, attestation de non-inscription, procès-verbaux…
 - **Sécurité des documents** : QR code et code signé (ECDSA P-256, empreinte SHA-256), page publique de vérification `/verifier`.
 - Thème clair et sombre, interface responsive.
+
+## Continuer le projet
+
+Lire le **[guide de développement](docs/GUIDE_DEVELOPPEMENT.md)** : architecture du frontend, règles à respecter, recettes pour ajouter un écran, un document ou un rôle, et liste de ce qu'il reste à faire.
 
 ## Avertissement sécurité
 
