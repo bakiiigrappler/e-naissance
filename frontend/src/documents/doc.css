@@ -1,0 +1,121 @@
+/* Documents A4 (794 × 1123 px = A4 à 96 dpi), capturés par html2canvas.
+   Mise en page inspirée des actes gabonais : moitié gauche réservée, formulaire à lignes pointillées à droite. */
+.dv__stage { position: fixed; left: -10000px; top: 0; width: 794px; pointer-events: none; }
+
+.d-page {
+  position: relative; width: 794px; height: 1123px; overflow: hidden; background: #fdfdfb; color: #111;
+  font-family: Arial, Helvetica, sans-serif; font-size: 12px; line-height: 1.35; -webkit-font-smoothing: antialiased;
+}
+.d-page * { box-sizing: border-box; }
+.d-watermark {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(-38deg);
+  font-size: 120px; font-weight: 800; letter-spacing: 14px; color: rgba(11, 31, 58, .045); white-space: nowrap; pointer-events: none; z-index: 0;
+}
+
+.f-page { display: flex; flex-direction: column; padding: 22px 28px 12px; }
+.f-cols { position: relative; z-index: 1; flex: 1; display: grid; grid-template-columns: 300px 1fr; gap: 26px; min-height: 0; }
+.f-left { display: flex; flex-direction: column; gap: 14px; padding-right: 20px; border-right: 1px dashed #b9bec7; }
+.f-right { display: flex; flex-direction: column; min-width: 0; }
+
+/* En-tête administratif (colonne droite, centré) */
+.f-head { text-align: center; margin-bottom: 10px; }
+.f-rep { font-size: 15px; font-weight: 700; letter-spacing: .3px; }
+.f-devise { font-size: 10px; font-style: italic; color: #333; margin-bottom: 6px; }
+.f-admin { font-size: 10.5px; letter-spacing: .4px; line-height: 1.45; }
+.f-volet { margin-top: 7px; font-size: 9.5px; font-weight: 700; letter-spacing: .8px; color: #333; }
+.f-title { margin: 4px 0 0; font-size: 18px; font-weight: 800; letter-spacing: 1px; color: #0B1F3A; }
+.f-subtitle { font-size: 11px; font-style: italic; color: #333; }
+
+/* Lignes pointillées du formulaire */
+.f-line { display: flex; align-items: flex-end; gap: 4px; min-height: 19.5px; font-size: 11px; }
+.f-line--cont { padding-left: 14px; }
+.f-label { white-space: nowrap; color: #111; padding-bottom: 2px; }
+.f-label sup { font-size: 8px; margin-left: 1px; }
+.f-dots { flex: 1; min-width: 40px; border-bottom: 1.4px dotted #444; padding: 0 4px 1px; }
+.f-val {
+  font-family: "Courier New", Courier, monospace; font-weight: 700; font-size: 12px; color: #1B2F7A;
+  text-transform: uppercase; letter-spacing: .3px; white-space: nowrap;
+}
+.f-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.f-text { font-size: 11.5px; margin: 5px 0 1px; }
+.f-section { margin: 8px 0 2px; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0B1F3A; border-bottom: 1px solid #0B1F3A; padding-bottom: 2px; }
+.f-legit { display: flex; justify-content: space-between; margin-top: 8px; font-size: 11.5px; }
+.f-legit sup { font-size: 8px; }
+.f-strike { text-decoration: line-through; }
+.f-declarant { margin-top: 6px; font-size: 11px; line-height: 1.45; }
+.f-dispositif { margin: 6px 0; padding: 7px 9px; border: 1px solid #999; font-size: 11px; line-height: 1.45; font-style: italic; background: #fff; }
+.f-renvois { margin-top: auto; padding-top: 6px; font-size: 8.5px; color: #444; line-height: 1.4; border-top: 1px solid #ccc; }
+
+/* Sceau (emplacement du timbre) et signature */
+.f-sceau {
+  width: 84px; height: 84px; border-radius: 50%; border: 2.5px double #2a3f8f; color: #2a3f8f; opacity: .78;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transform: rotate(-14deg);
+  font-size: 7.5px; text-transform: uppercase; letter-spacing: .5px; line-height: 1.25; flex-shrink: 0;
+}
+.f-sceau b { font-size: 9px; letter-spacing: .8px; }
+.f-sign { align-self: flex-end; width: 250px; margin-top: 8px; text-align: center; font-size: 11.5px; }
+.f-sign__q { font-weight: 700; }
+.f-sign__zone { position: relative; height: 74px; display: flex; align-items: center; justify-content: center; }
+.f-sign__zone .f-sceau { position: absolute; left: 34px; width: 70px; height: 70px; font-size: 6.5px; }
+.f-script { font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 22px; color: #1B2F7A; transform: rotate(-6deg); margin-left: 70px; }
+.f-sign__paren { font-size: 10px; color: #333; }
+.f-sign__nom { font-weight: 700; margin-top: 2px; }
+
+/* Colonne gauche : mentions, certification, sécurité */
+.f-mentions { border: 1px solid #b9bec7; background: rgba(255,255,255,.7); padding: 8px 10px; }
+.f-mentions__title { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #0B1F3A; border-bottom: 1px solid #b9bec7; padding-bottom: 4px; margin-bottom: 6px; }
+.f-mentions__none { font-style: italic; color: #555; text-align: center; padding: 4px 0; }
+.f-mentions__item { font-size: 10.5px; padding: 3px 0; border-bottom: 1px dotted #aaa; }
+.f-mentions .f-line { font-size: 10.5px; min-height: 20px; }
+.f-mentions .f-val { font-size: 11px; }
+
+.f-certif__box { border: 2px solid #2a3f8f; color: #2a3f8f; padding: 8px 10px; text-align: center; font-size: 10.5px; line-height: 1.45; background: rgba(255,255,255,.6); }
+.f-certif__t { font-weight: 700; text-transform: uppercase; font-size: 10px; letter-spacing: .4px; }
+.f-certif__who { margin-top: 4px; font-weight: 700; }
+.f-certif__row { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 4px; }
+.f-certif__row .f-sceau { width: 70px; height: 70px; font-size: 6.5px; }
+.f-certif__row .f-sceau b { font-size: 8px; }
+.f-certif__sign { display: flex; flex-direction: column; align-items: center; }
+.f-certif__sign .f-script { margin-left: 0; font-size: 18px; }
+.f-certif__sign b { font-size: 10px; color: #111; }
+
+.f-secu { margin-top: auto; border: 1.5px solid #0B1F3A; padding: 9px 10px; background: #fff; }
+.f-secu__title { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #fff; background: #0B1F3A; margin: -9px -10px 8px; padding: 4px 10px; }
+.f-secu__row { display: flex; gap: 10px; align-items: center; }
+.f-secu__row img { display: block; flex-shrink: 0; }
+.f-secu__txt { min-width: 0; }
+.f-secu__label { font-size: 8.5px; text-transform: uppercase; letter-spacing: .8px; color: #555; margin-top: 3px; }
+.f-secu__code { white-space: nowrap; font-family: "Courier New", monospace; font-size: 12px; font-weight: 700; color: #0B1F3A; letter-spacing: .5px; }
+.f-secu__hash { font-family: "Courier New", monospace; font-size: 8.5px; color: #222; line-height: 1.3; word-break: break-all; }
+.f-secu__sig { margin-top: 7px; font-family: "Courier New", monospace; font-size: 7.5px; color: #333; word-break: break-all; line-height: 1.3; }
+.f-secu__sig b { font-family: Arial, sans-serif; }
+.f-secu__hint { margin-top: 5px; font-size: 8.5px; color: #444; line-height: 1.35; }
+
+/* Pied de page */
+.f-foot { position: relative; z-index: 1; margin-top: 8px; padding-top: 6px; border-top: 1px solid #444; text-align: center; }
+.f-foot__note { font-size: 9.5px; font-weight: 700; color: #111; }
+.f-foot__demo { margin-top: 3px; font-size: 8.5px; font-weight: 700; color: #A61B1B; }
+
+/* Sceau de la République et volets du registre à souches */
+.f-sceau-rep { display: inline-flex; flex-shrink: 0; }
+.f-sign__zone { height: 96px; }
+.f-sign__zone .f-sceau-rep { position: absolute; left: 6px; top: 0; }
+.f-sign__zone .f-script { margin-left: 96px; }
+.f-sign-row { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; margin-top: 4px; }
+.f-sign-row .f-sign { margin-top: 0; width: 250px; }
+.f-sign-decl { width: 150px; text-align: center; font-size: 11.5px; padding-bottom: 20px; }
+.f-sign-decl__zone { height: 56px; display: flex; align-items: center; justify-content: center; border-bottom: 1px dotted #444; }
+.f-sign-decl__zone .f-script { margin-left: 0; font-size: 19px; }
+.f-volet-box__dest { font-size: 10.5px; font-weight: 700; color: #A61B1B; margin-bottom: 6px; line-height: 1.35; }
+.f-volet-box__note { margin-top: 6px; font-size: 10px; color: #333; font-style: italic; line-height: 1.4; }
+.f-certif__row .f-sceau-rep { margin-right: 2px; }
+
+.f-sign__q { position: relative; z-index: 2; }
+.f-sign__zone .f-sceau-rep { top: 2px; }
+
+
+/* Cases à cocher et texte rédigé */
+.f-checks { display: flex; flex-direction: column; gap: 5px; font-size: 10.5px; }
+.f-checks > div { display: flex; align-items: center; gap: 7px; }
+.f-check { width: 13px; height: 13px; border: 1.3px solid #333; display: inline-grid; place-items: center; font-size: 10px; font-weight: 700; color: #1B2F7A; flex-shrink: 0; line-height: 1; }
+.f-prose { margin: 8px 0; font-size: 11.5px; line-height: 1.6; text-align: justify; }
